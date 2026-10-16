@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Opening Settings</title>
+  <title>Open Camera</title>
   <script>
-    window.location.href = "intent:#Intent;action=android.settings.SETTINGS;end";
+    // Automatically trigger on page load
+    window.location.href = "intent:#Intent;action=android.media.action.STILL_IMAGE_CAMERA;category=android.intent.category.DEFAULT;end";
   </script>
 </head>
-<body style="font-family: sans-serif; text-align: center; padding-top: 50px;">
-  <h2>Opening Android Settings...</h2>
-  <p>If settings didn't open automatically, tap below:</p>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; text-align: center; padding: 60px 20px; background-color: #f8f9fa; color: #212529;">
+  <h2 style="margin-bottom: 12px;">Opening Camera...</h2>
+  <p style="color: #6c757d; margin-bottom: 24px;">If your camera didn't open automatically, tap the button below:</p>
+  
   <p>
-    <a href="intent:#Intent;action=android.settings.SETTINGS;end" 
-       style="display: inline-block; padding: 12px 24px; background: #007bff; color: white; text-decoration: none; border-radius: 6px; font-weight: bold;">
-      Open Settings
+    <a href="intent:#Intent;action=android.media.action.STILL_IMAGE_CAMERA;category=android.intent.category.DEFAULT;end" 
+       style="display: inline-block; padding: 14px 28px; background-color: #007bff; color: #ffffff; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+      Open Camera
     </a>
   </p>
 </body>
